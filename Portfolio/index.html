@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Contact Form</title>
+</head>
+<body>
+
+  <form action="http://webdevbasics.net/scripts/demo.php" method="POST" id="contactForm" onsubmit="return validateForm()">
+    
+    <label for="name">Name<span>*</span>:</label>
+    <input type="text" id="name" name="name" required>
+
+    
+    <label for="email">Email<span>*</span>:</label>
+    <input type="email" id="email" name="email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message"></textarea>
+
+    
+    <label>Options:</label>
+    <input type="checkbox" id="option1" name="options[]" value="Option 1">
+    <label for="option1">Option 1</label>
+    <input type="checkbox" id="option2" name="options[]" value="Option 2">
+    <label for="option2">Option 2</label>
+
+    
+    <label for="select">Select:</label>
+    <select id="select" name="select">
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+    </select>
+
+    
+    <input type="submit" value="Submit">
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
